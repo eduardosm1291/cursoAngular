@@ -6,11 +6,19 @@
 
 .contenedor {
     display: grid;
-    height: 900px;
+    grid-gap: 20px;
+    grid-gap: 80px;
+    gap: 120px;
+    grid-template-rows: 300px 200px 200px;
+    grid-auto-flow: column;
+
  
 }
 
 .item {
-    background-color: green;
-    height:150px;
+    border: 5px solid #00bcd4;
+    font-size: 2rem;
+    height: max-content;
+
+
 }

@@ -1,10 +1,12 @@
 
-<div class=" contenedor">
-    <div class="card">
-        {{pokemon.name}}
+<div >
+    <div >
+        <h2>{{pokemon.name}}</h2>
+        <div >
+            <img src="{{detalle}}" alt="">
+
+        </div>
+        <button  (click)="detail(pokemon.name)" *ngIf="!detalle" > quien es ese pokemon?</button>
     </div>
-    <button class="btn" (click)="detail(pokemon.name)"> obtener Pokemon</button>
-    <div class="detail">
-        
-    </div>
+    
 </div>

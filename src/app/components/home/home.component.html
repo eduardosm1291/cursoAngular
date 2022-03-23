@@ -3,11 +3,8 @@
 
     <div class="contenedor">
 
-        <div class="item" *ngFor="let pokemon of pokemonesArray">
-            <div class="col">
+        <div class="item card" *ngFor="let pokemon of pokemonesArray">
                 <app-pokemon-container [pokemon]="pokemon" (detailPokemon) ="getDetail($event)"></app-pokemon-container>
-            </div>
-           
         </div>
     </div>
 </div>

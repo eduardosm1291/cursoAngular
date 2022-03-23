@@ -13,6 +13,7 @@ export interface Pokemon{
 export class PokemonContainerComponent implements OnInit {
   @Input() pokemon!: Pokemon;
   @Output() detailPokemon: EventEmitter<string> = new EventEmitter();
+  detalle!:string;
   constructor(private pokemonService: PokemonService) { 
 
   }
@@ -22,6 +23,7 @@ export class PokemonContainerComponent implements OnInit {
       filter((detalles) => detalles.name=== this.pokemon.name)
     ).subscribe((detalle: any) => {
       console.log(detalle);
+      this.detalle = detalle.sprites.back_default;
     })
   }
 
