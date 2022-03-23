@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <h3>Pokemones</h3>
+
+    <div class="contenedor">
+
+        <div class="item" *ngFor="let pokemon of pokemonesArray">
+            <div class="col">
+                <app-pokemon-container [pokemon]="pokemon" (detailPokemon) ="getDetail($event)"></app-pokemon-container>
+            </div>
+           
+        </div>
+    </div>
+</div>
