@@ -25,7 +25,7 @@ export class PokemonContainerComponent implements OnInit {
     ).subscribe((detalle: any) => {
       console.log(detalle);
       this.detalle= detalle;
-      this.url = detalle.sprites.back_default;
+      this.url = detalle.sprites.front_default;
     })
   }
 

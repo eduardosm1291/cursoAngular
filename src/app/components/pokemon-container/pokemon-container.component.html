@@ -1,12 +1,14 @@
 
-<div class="pkm-card">
+<div class="pkm-card card">
    
         <h2>{{pokemon.name}}</h2>
-      
-        <img class="pkm-images" src="{{url}}" alt="">
+        <div *ngIf="detalle">
+                <img class="pkm-images" src="{{url}}" alt="">
 
+        </div>
+      
         <p class="pkm-type" *ngIf="detalle">{{ 'Type: '+detalle.types[0].type.name}}</p>
-        <a (click)="detail(pokemon.name)" *ngIf="!detalle" > quien es ese pokemon?</a>
+        <a (click)="detail(pokemon.name)" *ngIf="!detalle" class="btn" > quien es ese pokemon?</a>
    
     
 </div>
