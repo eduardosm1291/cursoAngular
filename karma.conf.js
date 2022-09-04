@@ -9,12 +9,13 @@ module.exports = function (config) {
     junitReporter: {
       outputFile: 'test-results.xml'
     },
-    browsers: ['ChromeHeadlessNoSandbox'],
+    browsers: ['ChromeNoSandbox'],
+
     customLaunchers: {
-        ChromeHeadlessNoSandbox: {
-            base: 'ChromeHeadless',
-            flags: ['--no-sandbox']
-        }
+      ChromeNoSandbox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
     },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
