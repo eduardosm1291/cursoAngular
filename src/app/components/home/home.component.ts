@@ -13,9 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.pokemonService.pokemones().subscribe((pokemones: any) => {
-      this.pokemonesArray = pokemones.results;
-    });
+   console.log('hello');
   }
 
   getDetail(name: string) {
