@@ -4,6 +4,11 @@
 module.exports = function (config) {
 
   config.set({
+    singleRun: true,
+    reporters: ['dots', 'junit'],
+    junitReporter: {
+      outputFile: 'test-results.xml'
+    },
     browsers: ['ChromeHeadlessNoSandbox'],
     customLaunchers: {
         ChromeHeadlessNoSandbox: {
